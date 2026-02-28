@@ -40,8 +40,14 @@ Crie um arquivo `.env` com as seguintes variáveis:
 
 Para iniciar o projeto com Docker:
 
+```
+py -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+
 docker compose up --build
 
+```
 ⚡ Isso irá construir os containers e inicializar a aplicação automaticamente.
 
 
