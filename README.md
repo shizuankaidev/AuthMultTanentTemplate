@@ -67,15 +67,15 @@ docker compose up --build
 
 ======================================================================================================
 
-    O objetivo deste projeto é resolver um problema que venho enfrentando há algum tempo: a criação repetitiva de uma estrutura com a qual já estou familiarizado. Sei que não sou um programador expert, mas sigo boas práticas de segurança. Com isso, espero que mais pessoas possam contribuir para este template, cujo foco é:
+O objetivo deste projeto é resolver um problema que venho enfrentando há algum tempo: a criação repetitiva de uma estrutura com a qual já estou familiarizado. Sei que não sou um programador expert, mas sigo boas práticas de segurança. Com isso, espero que mais pessoas possam contribuir para este template, cujo foco é:
 
-    - Autenticação e login
+- Autenticação e login
 
-    - Segurança com JWT
+- Segurança com JWT
 
-    - Controle de limite de acesso (Range Limit)
+- Controle de limite de acesso (Range Limit)
 
-    - Modelo com Multi-Tenant
+- Modelo com Multi-Tenant
 
-    Dessa forma, teremos um ponto de partida sólido para backends, permitindo que a partir deste template seja possível construir qualquer outra aplicação de forma segura e organizada.
+Dessa forma, teremos um ponto de partida sólido para backends, permitindo que a partir deste template seja possível construir qualquer outra aplicação de forma segura e organizada.
 
