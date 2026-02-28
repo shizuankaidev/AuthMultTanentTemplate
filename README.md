@@ -36,19 +36,33 @@ Crie um arquivo `.env` com as seguintes variáveis:
 
 ```
 
-🔹 Inicialização do Projeto
+## 🔹 Inicialização do Projeto
 
-Para iniciar o projeto com Docker:
+Siga os passos abaixo para iniciar o projeto com Docker:
 
-```
+### 1. **Criar e ativar o ambiente virtual Python**  
+
+```bash
+# Windows
 py -m venv venv
 venv\Scripts\activate
-pip install -r requirements.txt
 
-docker compose up --build
+# Linux / macOS
+python3 -m venv venv
+source venv/bin/activate
+```
+
+#### Instalar dependências do Python
 
 ```
-⚡ Isso irá construir os containers e inicializar a aplicação automaticamente.
+pip install -r requirements.txt
+```
+#### Inicializar o Docker e subir os containers
+
+```
+docker compose up --build
+```
+⚡ Isso irá construir os containers e inicializar a aplicação automaticamente, pronta para uso.
 
 
 ======================================================================================================
