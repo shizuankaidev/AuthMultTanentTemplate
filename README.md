@@ -2,7 +2,7 @@
 
 ## 🔹 Requisitos
 
-- Python  
+- Python  3.13  (python --version)
 - Docker  
 - PostgreSQL  
 
@@ -11,6 +11,13 @@
 ## 🔹 Configuração do `.env`
 
 Crie um arquivo `.env` com as seguintes variáveis:
+
+para iniciar corretamente, a primeira inicialização tem que ter
+
+SUPERUSER       =true
+MIGRATION       =true
+RESETDATABASE   =true
+
 
 ```dotenv
 
@@ -31,8 +38,8 @@ Crie um arquivo `.env` com as seguintes variáveis:
     DJANGO_SUPERUSER_EMAIL=admin@email.com
     DJANGO_SUPERUSER_PASSWORD=admin
 
-    MIGRATION=false
-    RESETDATABASE=false
+    MIGRATION=true
+    RESETDATABASE=true
 
 ```
 
@@ -63,7 +70,11 @@ pip install -r requirements.txt
 docker compose up --build
 ```
 ⚡ Isso irá construir os containers e inicializar a aplicação automaticamente, pronta para uso.
+    Apos isso troque para:
 
+SUPERUSER       =false
+MIGRATION       =false
+RESETDATABASE   =false
 
 ======================================================================================================
 
