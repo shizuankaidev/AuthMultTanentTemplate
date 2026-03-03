@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # entrypoint.sh - espera DB, aplica reset/migrations e inicia Django
 set -e
 

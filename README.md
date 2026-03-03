@@ -21,25 +21,25 @@ RESETDATABASE   =true
 
 ```dotenv
 
-    DEBUG=True
+DEBUG=True
 
-    SECRET_KEY=django-insecure-7xK9vQ!Shizu_4mTz#pL2r@8NwE6yU$1cHfR3bA
-    ALLOWED_HOSTS=127.0.0.1,localhost,0.0.0.0
+SECRET_KEY=django-insecure-7xK9vQ!Shizu_4mTz#pL2r@8NwE6yU$1cHfR3bA
+ALLOWED_HOSTS=127.0.0.1,localhost,0.0.0.0
 
-    DB_NAME=crm_db
-    DB_USER=crm_user
-    DB_PASSWORD=crm_pass
-    DB_HOST=db
-    DB_PORT=5432
+DB_NAME=crm_db
+DB_USER=crm_user
+DB_PASSWORD=crm_pass
+DB_HOST=db
+DB_PORT=5432
 
 
-    SUPERUSER=true
-    DJANGO_SUPERUSER_USERNAME=admin
-    DJANGO_SUPERUSER_EMAIL=admin@email.com
-    DJANGO_SUPERUSER_PASSWORD=admin
+SUPERUSER=true
+DJANGO_SUPERUSER_USERNAME=admin
+DJANGO_SUPERUSER_EMAIL=admin@email.com
+DJANGO_SUPERUSER_PASSWORD=admin
 
-    MIGRATION=true
-    RESETDATABASE=true
+MIGRATION=true
+RESETDATABASE=true
 
 ```
 
@@ -76,6 +76,8 @@ SUPERUSER       =false
 MIGRATION       =false
 RESETDATABASE   =false
 
+recomendado: ir nos arquivos:  /CICD/ - wait-for-db.sh / superuser.sh
+e trocar de CRLF pra LF
 ======================================================================================================
 
 O objetivo deste projeto é resolver um problema que venho enfrentando há algum tempo: a criação repetitiva de uma estrutura com a qual já estou familiarizado. Sei que não sou um programador expert, mas sigo boas práticas de segurança. Com isso, espero que mais pessoas possam contribuir para este template, cujo foco é:

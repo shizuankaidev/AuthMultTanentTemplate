@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # superuser.sh - cria superuser Django a partir de variáveis de ambiente
 
 : "${SUPERUSER:=false}"
