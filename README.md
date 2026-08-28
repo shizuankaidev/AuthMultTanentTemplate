@@ -92,3 +92,5 @@ O objetivo deste projeto é resolver um problema que venho enfrentando há algum
 
 Dessa forma, teremos um ponto de partida sólido para backends, permitindo que a partir deste template seja possível construir qualquer outra aplicação de forma segura e organizada.
 
+# shizuCRM
+# shizuCRM

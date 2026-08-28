@@ -1,0 +1,498 @@
+{
+  "info": {
+    "_postman_id": "a30cfcd3-afdd-4a3f-b0ca-f59f10518fb2",
+    "name": "CRM API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "28921501"
+  },
+  "item": [
+    {
+      "name": "authentication",
+      "item": [
+        {
+          "name": "Admin",
+          "item": [
+            {
+              "name": "UPDATE user",
+              "request": {
+                "method": "PUT",
+                "header": []
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "login - ADMIN",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"admin@email.com\",\r\n  \"password\": \"admin\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/auth/login/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "login",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login - SHIZU",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"shizu@email.com\",\r\n  \"password\": \"shizu123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/auth/login/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "login",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMzA5NDE5LCJpYXQiOjE3NzIzMDU4MTksImp0aSI6IjZiZmU1ZWQ5NDdmMjQwMGFhNjMzZjFlMWI5NjlhN2FmIiwidXNlcl9pZCI6IjEiLCJ1c2VyX3R5cGUiOiJBRE1JTiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaXNfdmVyaWZpZWQiOmZhbHNlfQ.UTqhmexR-7xC5A5TaUFnZDkRQ2bNhFB9bxL6jtf2PRk",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"shizu\",\r\n  \"email\": \"shizu@email.com\",\r\n  \"password\": \"shizu123\",\r\n  \"user_type\": \"CLIENTE\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/auth/register/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "register",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "refresh",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc3MjQxNjA3MSwiaWF0IjoxNzcyMzI5NjcxLCJqdGkiOiIwNWY5NTBlMzQ3NTU0NTMxOGVhNzU5N2U5ZDZiMTBlNCIsInVzZXJfaWQiOiIxIiwidXNlcl90eXBlIjoiQURNSU4iLCJlbWFpbCI6ImFkbWluQGVtYWlsLmNvbSIsImlzX3ZlcmlmaWVkIjpmYWxzZX0.cQwkz02GEqr-vkcZ9vtAoKypbitOJXmxxayp9sZ-fr0\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/auth/refresh/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "refresh",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "profile",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMzMzMjcxLCJpYXQiOjE3NzIzMjk2NzEsImp0aSI6Ijg1ZDRiN2RkZGI0MjQ0MzhhNTYwYTI2YTIyZThhZTc4IiwidXNlcl9pZCI6IjEiLCJ1c2VyX3R5cGUiOiJBRE1JTiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaXNfdmVyaWZpZWQiOmZhbHNlfQ.kBUdXNHlcoX0RIB647Q9dTKpna1FqB703whHkEqxw44",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/auth/profile/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "profile",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "company",
+      "item": [
+        {
+          "name": "list",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMzA1OTkwLCJpYXQiOjE3NzIzMDIzOTAsImp0aSI6IjY4NDU1MjRkZGFkNTQzOTU4MzcwZjA4Yzc4ZGVlOTRlIiwidXNlcl9pZCI6IjEiLCJ1c2VyX3R5cGUiOiJBRE1JTiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaXNfdmVyaWZpZWQiOmZhbHNlfQ.sKarasuKOG8MpDiKXpPJGSax6C48-iw2arWiuGUyVYQ",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/company/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "company",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMzMzNDU0LCJpYXQiOjE3NzIzMjk4NTQsImp0aSI6ImI3MDZjZjllYjkyMTQzYWQ5YmI3NDE0M2Q2N2U5ZTcxIiwidXNlcl9pZCI6IjEiLCJ1c2VyX3R5cGUiOiJBRE1JTiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaXNfdmVyaWZpZWQiOmZhbHNlfQ.pmBOL7f7rMmrrXWZ4VExd80NFP8jU10Bogpa9L4ig1Q",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/company/1/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "company",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyNTY1MTg1LCJpYXQiOjE3NzI1NjE1ODUsImp0aSI6IjE0YWMzZmM0NmI4YzQ4YzM5M2ZiZjM4NWI0MWJiMDI3IiwidXNlcl9pZCI6IjEiLCJ1c2VyX3R5cGUiOiJBRE1JTiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaXNfdmVyaWZpZWQiOmZhbHNlfQ.mXWWzc6s8Mn44CHaY966G2H95njGBN2nUZwlmySw6no",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"shizu Eterprises\",\r\n  \"slug\": \"shizu-eterprises\",\r\n  \"cnpj\": \"13.345.678/0001-99\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/company/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "company",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "edit",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMzE2MTMzLCJpYXQiOjE3NzIzMTI1MzMsImp0aSI6IjJlMGZjMGFkN2M4NzRjMmRiNWIwMWQzN2YxMjgzZjEzIiwidXNlcl9pZCI6IjEiLCJ1c2VyX3R5cGUiOiJBRE1JTiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaXNfdmVyaWZpZWQiOmZhbHNlfQ.8CWFrLu9UFRz6UzTvrnPqBtdcF7u7EYx6-V6Nduk6sU",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"shizu Eterprises\",\r\n  \"slug\": \"shizu-eterprises\",\r\n  \"cnpj\": \"12.345.678/0001-99\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/company/1/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "company",
+                "1",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add owner",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyNTY1MjM0LCJpYXQiOjE3NzI1NjE2MzQsImp0aSI6IjA4MTFlM2FhMzEzOTQxZTNiNTlmNDI2ZWRiNzZiMDRkIiwidXNlcl9pZCI6IjEiLCJ1c2VyX3R5cGUiOiJBRE1JTiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaXNfdmVyaWZpZWQiOmZhbHNlfQ.13A6qa3oDNC15yiD_1D2VG3WnAkWNYabzLKyN2S3xbg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"user_id\": 2\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/company/1/owner/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "company",
+                "1",
+                "owner",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "revoke owner",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyMzEyMjEwLCJpYXQiOjE3NzIzMDg2MTAsImp0aSI6Ijk3NzhlZTJmZTYxNjQzMzBhMjYxZTU0ZWU1MDcxZWVlIiwidXNlcl9pZCI6IjEiLCJ1c2VyX3R5cGUiOiJBRE1JTiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaXNfdmVyaWZpZWQiOmZhbHNlfQ.VFkpX0zqxd66bq3HzYTWANcwrwF_Wphi0xVQUsKzppk",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"user_id\": 2\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/company/1/owner/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "company",
+                "1",
+                "owner",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "store",
+      "item": [
+        {
+          "name": "get",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Loja Centro\",\r\n    \"slug\": \"loja-centro\",\r\n    \"is_active\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/store/create/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "store",
+                "create",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "new store",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Loja Centro\",\r\n    \"slug\": \"loja-centro\",\r\n    \"is_active\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/api/store/create/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "store",
+                "create",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
